@@ -548,18 +548,22 @@
         </nav>
     </header>
 
-    <!-- PORTADA CON VIDEO DE FONDO Y FILTRO OSCURO -->
-    <section id="inicio" class="hero-principal" style="position: relative; overflow: hidden;">
+      <!-- PORTADA CON VIDEO DE FONDO Y MÁSCARA ANGULAR FORZADA -->
+    <section id="inicio" class="hero-principal" style="position: relative; overflow: hidden; background-color: #070e1b;">
         
-        <!-- El elemento de video en crudo (puedes reemplazarlo por tu archivo .mp4 real) -->
-        <video autoplay muted loop playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -2; transform: translate(-50%, -50%); object-fit: cover;">
-            <source src="videopagweb.mp4" type="video/mp4">
+        <!-- El elemento de video con parámetros de forzado institucional -->
+        <video autoplay muted loop playsinline preload="auto" style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -2; transform: translate(-50%, -50%); object-fit: cover;">
+            
+            <!-- ====== ATENCIÓN: REEMPLAZA "video-estudio.mp4" POR EL NOMBRE EXACTO DE TU ARCHIVO ====== -->
+            <source src="video-estudio.mp4" type="video/mp4">
+            
             Tu navegador no soporta videos.
         </video>
 
-        <!-- Capa oscura translúcida para asegurar la perfecta lectura del texto blanco -->
+        <!-- Capa oscura translúcida para garantizar el perfecto contraste de las letras blancas -->
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(7, 14, 27, 0.72), rgba(7, 14, 27, 0.88)); z-index: -1;"></div>
 
+        <!-- Textos institucionales equilibrados sobre el video ambiental -->
         <h1>Trayectoria Legal con una Perspectiva de Vanguardia</h1>
         <p>Brindamos soluciones jurídicas estratégicas de alta complejidad para empresas y corporaciones que operan en mercados globales dinámicos.</p>
         <a href="#contacto" class="boton-premium">Agendar consulta confidencial</a>
