@@ -54,17 +54,57 @@
             transition: all 0.4s ease;
         }
 
+    /* --- ESTILOS OPTIMIZADOS DEL LOGOTIPO PREMIUM --- */
         .marca-estudio {
             text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 10px; /* Brinda el aire y balance ideal al logo */
+            transition: opacity 0.3s ease;
         }
 
-        .subtitulo-estudio {
-            color: var(--color-secundario);
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-weight: 600;
-            font-family: var(--fuente-cuerpo);
+        .marca-estudio:hover {
+            opacity: 0.9; /* Sutil feedback visual al posicionar el cursor */
+        }
+
+        .nombre-estudio {
+            font-family: var(--fuente-titulos);
+            color: #ffffff;
+            user-select: none;
+        }
+
+        .nombre-estudio .apellido-principal {
+            display: block;
+            font-weight: 500;
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .nombre-estudio .apellido-secundario {
+            display: block;
+            font-weight: 300;
+            font-size: 0.95rem;
+            letter-spacing: 2.5px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-top: 4px;
+            line-height: 1.2;
+        }
+
+        .contenedor-subtitulo-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .linea-logo {
+            width: 25px;
+            height: 1px;
+            background-color: var(--color-secundario);
+            display: inline-block;
         }
 
         nav ul {
@@ -104,7 +144,58 @@
         nav ul li a:hover::after {
             width: 100%;
         }
+              /* --- ESTILOS OPTIMIZADOS DEL LOGOTIPO PREMIUM --- */
+        .marca-estudio {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 10px;
+            transition: opacity 0.3s ease;
+        }
 
+        .marca-estudio:hover {
+            opacity: 0.9;
+        }
+
+        .nombre-estudio {
+            font-family: var(--fuente-titulos);
+            color: #ffffff;
+            user-select: none;
+        }
+
+        .nombre-estudio .apellido-principal {
+            display: block;
+            font-weight: 500;
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .nombre-estudio .apellido-secundario {
+            display: block;
+            font-weight: 300;
+            font-size: 0.95rem;
+            letter-spacing: 2.5px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-top: 4px;
+            line-height: 1.2;
+        }
+
+        .contenedor-subtitulo-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .linea-logo {
+            width: 25px;
+            height: 1px;
+            background-color: var(--color-secundario);
+            display: inline-block;
+        }
         /* --- PORTADA CON MÁSCARA ANGULAR ASIMÉTRICA --- */
         .hero-principal {
             min-height: 100vh;
