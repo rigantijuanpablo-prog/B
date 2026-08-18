@@ -181,65 +181,67 @@
             transform: translateX(-50%);
         }
 
-        nav ul li a:hover {
+       nav ul li a:hover {
             color: var(--color-secundario);
         }
 
         nav ul li a:hover::after {
             width: 100%;
         }
-            <!-- CONTENEDOR DE IDENTIDAD MINIMALISTA TOTALMENTE ARMONIZADO -->
-        <a href="#" class="marca-estudio">
-            <!-- Sigla RGM en oro satinado -->
-            <div class="sigla-premium">RGM</div>
-            
-            <!-- Estructura limpia de apellidos sin la palabra abogados -->
-            <div class="nombre-estudio">
-                <span class="apellido-principal">RIGANTI, GEILER</span>
-                <span class="apellido-secundario">& MÁRQUEZ ALLURALDE</span>
-            </div>
-        </a> 
 
-        .marca-estudio:hover {
-            opacity: 0.9;
+        /* --- BRANDING MINIMALISTA ABSOLUTO ARMONIZADO --- */
+        .marca-estudio {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Separación simétrica adaptada al menú */
+            padding-left: 10px;
+            transition: opacity 0.3s ease;
+            height: 100%;
         }
 
+        .marca-estudio:hover {
+            opacity: 0.85;
+        }
+
+        /* Sigla insignia en oro satinado con divisor integrado */
+        .sigla-premium {
+            font-family: var(--fuente-titulos);
+            color: var(--color-secundario) !important; /* Oro satinado de la firma */
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            border-right: 1px solid rgba(197, 168, 128, 0.25); /* Fina línea divisoria */
+            padding-right: 20px;
+            line-height: 1;
+            user-select: none;
+        }
+
+        /* Bloque de Apellidos Corporativo */
         .nombre-estudio {
             font-family: var(--fuente-titulos);
-            color: #ffffff;
-            user-select: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .nombre-estudio .apellido-principal {
             display: block;
             font-weight: 500;
-            font-size: 1.25rem;
-            letter-spacing: 2px;
-            line-height: 1.1;
+            font-size: 1.15rem;
+            letter-spacing: 1.5px;
+            line-height: 1.15;
+            color: #ffffff !important; /* Elimina definitivamente el azul eléctrico del navegador */
         }
 
         .nombre-estudio .apellido-secundario {
             display: block;
             font-weight: 300;
-            font-size: 0.95rem;
-            letter-spacing: 2.5px;
-            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.75) !important; /* Gris suave unificado al fondo */
             margin-top: 4px;
-            line-height: 1.2;
-        }
-
-        .contenedor-subtitulo-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 8px;
-        }
-
-        .linea-logo {
-            width: 25px;
-            height: 1px;
-            background-color: var(--color-secundario);
-            display: inline-block;
+            line-height: 1.15;
         }
         /* --- PORTADA CON MÁSCARA ANGULAR ASIMÉTRICA --- */
         .hero-principal {
@@ -525,15 +527,15 @@
 <body>
 
     <header>
-        <!-- LOGOTIPO INSTITUCIONAL CORPORATIVO PREMIUM -->
-        <a href="#" class="marca-estudio" style="text-decoration: none;">
-            <div class="nombre-estudio" style="line-height: 1.25; font-family: var(--fuente-titulos); color: #ffffff;">
-                <span style="display: block; font-weight: 500; font-size: 1.2rem; letter-spacing: 1.5px;">RIGANTI, GEILER</span>
-                <span style="display: block; font-weight: 300; font-size: 0.95rem; letter-spacing: 2px; color: rgba(255,255,255,0.85); margin-top: 2px;">& MÁRQUEZ ALLURALDE</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
-                <span style="width: 20px; height: 1px; background-color: var(--color-secundario); display: inline-block;"></span>
-                <span class="subtitulo-estudio">ABOGADOS</span>
+              <!-- CONTENEDOR DE IDENTIDAD MINIMALISTA TOTALMENTE ARMONIZADO -->
+        <a href="#" class="marca-estudio">
+            <!-- Sigla RGM en oro satinado -->
+            <div class="sigla-premium">RGM</div>
+            
+            <!-- Estructura limpia de apellidos en blanco puro -->
+            <div class="nombre-estudio">
+                <span class="apellido-principal">RIGANTI, GEILER</span>
+                <span class="apellido-secundario">& MÁRQUEZ ALLURALDE</span>
             </div>
         </a>
         <nav>
