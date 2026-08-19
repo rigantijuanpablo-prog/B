@@ -42,9 +42,13 @@
         .seccion-cierre-marval {
             position: relative;
             background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 100px 20px;
+            
+            /* 1. 🚨 BAJA EL ENCUADRE UN REGLÓN PARA DARLE AIRE A LA PUNTA DEL OBELISCO */
+            background-position: center 15%; 
+            
+            /* 2. 🚨 AMPLÍA EL ESPACIO VERTICAL EQUILIBRADO (160px arriba, 180px abajo para compensar el botón) */
+            padding: 160px 20px 180px 20px; 
+            
             text-align: center;
             color: #ffffff;
             font-family: var(--fuente-cuerpo);
