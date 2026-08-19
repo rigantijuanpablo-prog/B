@@ -739,6 +739,7 @@
                 header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.05)';
             }
         });
+         </script> 
 <!-- SECCIÓN ÁREAS DE PRÁCTICA -->
     <section id="practicas" style="background-color: var(--color-fondo-claro);">
         <div class="encabezado-seccion">
@@ -775,31 +776,32 @@
                 <p>Planeamiento impositivo local e internacional, consultoría estratégica y representación ante inspecciones u organismos fiscales.</p>
             </div>
         </div>
-        // 2. Animación suave de aparición para las tarjetas informativas (Scroll Reveal)
-        const tarjetas = document.querySelectorAll('.tarjeta-corporativa');
-        const opcionesObservador = { threshold: 0.15, rootMargin: "0px 0px -40px 0px" };
+        </section>
+      <!-- 🎥 ANIMACIÓN SCROLL REVEAL (AQUÍ EMPIEZA EL JAVASCRIPT CORREGIDO) -->
+<script>
+    const tarjetas = document.querySelectorAll('.tarjeta-corporativa');
+    const opcionesObservador = { threshold: 0.15, rootMargin: "0px 0px -40px 0px" };
 
-        const observador = new IntersectionObserver(function(entradas, observador) {
-            entradas.forEach(entrada => {
-                if (!entrada.isIntersecting) return;
-                entrada.target.style.opacity = '1';
-                entrada.target.style.transform = 'translateY(0)';
-                observador.unobserve(entrada.target);
-            });
-        }, opcionesObservador);
-
-        tarjetas.forEach(tarjeta => {
-            tarjeta.style.opacity = '0';
-            tarjeta.style.transform = 'translateY(30px)';
-            tarjeta.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-            observador.observe(tarjeta);
+    const observador = new IntersectionObserver(function(entradas, observador) {
+        entradas.forEach(entrada => {
+            if (!entrada.isIntersecting) return;
+            
+            // Añade la clase que hace visible la tarjeta al hacer scroll
+            entrada.target.classList.add('visible'); 
+            observador.unobserve(entrada.target);
         });
+    }, opcionesObservador);
 
-        // 3. Forzar al navegador a posicionarse arriba de todo al actualizar la página
-        if ('scrollRestoration' in history) {
-            history.scrollRestoration = 'manual';
-        }
-        window.scrollTo(0, 0);
-    </script>
+    // Activamos el observador para cada una de las 6 tarjetas
+    tarjetas.forEach(tarjeta => {
+        observador.observe(tarjeta);
+    });
+   // 3. Forzar al navegador a posicionarse arriba de todo al actualizar la página
+    // 👈 (Esto ahora sí está protegido dentro del script)
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+</script> 
 </body>
 </html>
