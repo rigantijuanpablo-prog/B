@@ -303,12 +303,15 @@
             width: 100%;
         }
         /* --- PORTADA CON MÁSCARA ANGULAR ASIMÉTRICA --- */
-        .hero-principal {
+       .hero-principal {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            
+            /* 🚨 AGREGA ESTA LÍNEA CLAVE PARA ALINEAR TODO EN EL CENTRO ABSOLUTO: */
+            align-items: center; 
+            
             text-align: center;
             padding: 140px 8% 180px 8%;
             clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
