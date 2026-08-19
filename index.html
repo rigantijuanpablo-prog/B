@@ -9,6 +9,957 @@
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
+<style>
+        /* --- VARIABLES DE DISEÑO PREMIUM (ESTILO MARVAL & BECCAR VARELA) --- */
+        :root {
+            --color-primario: #070e1b;   /* Azul medianoche profundo */
+            --color-secundario: #c5a880; /* Dorado satinado institucional */
+            --color-fondo-claro: #f8fafc;/* Gris premium ultra limpio */
+            --color-texto-oscuro: #1e293b;
+            --color-texto-suave: #64748b; 
+            --fuente-titulos: 'Cinzel', serif;
+            --fuente-cuerpo: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            color: var(--color-texto-oscuro);
+            background-color: #ffffff;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ==========================================
+           NUEVOS ESTILOS: SECCIÓN FIN DE PÁGINA (INSTAGRAM)
+           ========================================== */
+        .seccion-cierre-marval {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 100px 20px;
+            text-align: center;
+            color: #ffffff;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .contenido-cierre {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .subtitulo-cierre {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: var(--color-secundario);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .marca-redes {
+            font-size: 54px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            letter-spacing: -1px;
+            font-family: var(--fuente-titulos);
+        }
+
+        .descripcion-cierre {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            opacity: 0.95;
+        }
+
+        .btn-instagram {
+            display: inline-block;
+            background-color: var(--color-secundario);
+            color: var(--color-primario);
+            text-decoration: none;
+            padding: 14px 35px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-instagram:hover {
+            background-color: #b0936b;
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================
+           NUEVOS ESTILOS: BARRA FLOTANTE INTERACTIVA
+           ========================================== */
+        .barra-flotante-contacto {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .item-flotante {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            background-color: var(--color-primario);
+            border-left: 2px solid var(--color-secundario);
+            color: #ffffff;
+            text-decoration: none;
+            height: 48px;
+            min-width: 48px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .icono-flotante {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .texto-flotante {
+            white-space: nowrap;
+            padding: 0 0px 0 10px;
+            font-size: 14px;
+            font-family: var(--fuente-cuerpo);
+            font-weight: 500;
+            max-width: 0;
+            opacity: 0;
+            transition: max-width 0.3s ease, padding 0.3s ease, opacity 0.2s ease;
+        }
+
+        .item-flotante:hover {
+            background-color: var(--color-secundario);
+            color: var(--color-primario);
+        }
+
+        .item-flotante:hover .texto-flotante {
+            max-width: 250px;
+            padding-right: 15px;
+            opacity: 1;
+        }
+
+        .item-flotante.item-whatsapp:hover {
+            background-color: #25D366;
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .barra-flotante-contacto {
+                top: auto;
+                bottom: 20px;
+                transform: none;
+                right: 10px;
+                flex-direction: row;
+                gap: 8px;
+            }
+            .item-flotante {
+                border-radius: 50%;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+                border-left: none;
+            }
+            .item-flotante:hover {
+                padding-left: 0;
+            }
+            .item-flotante:hover .texto-flotante {
+                max-width: 0;
+                padding-right: 0;
+                opacity: 0;
+            }
+        }
+Usa el código con precaución.¿Pudiste pegarlo correctamente? Avísame si necesitas ayuda para saber en qué parte exacta de la parte inferior del HTML debes colocar las etiquetas de la barra flotante y la sección de Instagram.Hacer una pregu
+
+        /* --- BARRA DE NAVEGACIÓN TRANSLÚCIDA CON BLUR --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(7, 14, 27, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(197, 168, 128, 0.12);
+            transition: all 0.4s ease;
+        }
+
+    /* --- BRANDING MINIMALISTA ABSOLUTO ARMONIZADO --- */
+        .marca-estudio {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Separación perfecta adaptada a la escala del menú */
+            padding-left: 10px;
+            transition: opacity 0.3s ease;
+            height: 100%;
+        }
+
+        .marca-estudio:hover {
+            opacity: 0.85;
+        }
+
+        /* Sigla insignia en oro satinado con divisor integrado */
+        .sigla-premium {
+            font-family: var(--fuente-titulos);
+            color: var(--color-secundario) !important; /* Dorado institucional */
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            border-right: 1px solid rgba(197, 168, 128, 0.25); /* Línea divisoria fina */
+            padding-right: 20px;
+            line-height: 1;
+            user-select: none;
+        }
+
+        /* Bloque de Apellidos Corporativo */
+        .nombre-estudio {
+            font-family: var(--fuente-titulos);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .nombre-estudio .apellido-principal {
+            display: block;
+            font-weight: 500; /* Peso balanceado con los links de navegación */
+            font-size: 1.15rem;
+            letter-spacing: 1.5px;
+            line-height: 1.15;
+            color: #ffffff !important; /* Fuerza al navegador a quitar el azul de los links */
+        }
+
+        .nombre-estudio .apellido-secundario {
+            display: block;
+            font-weight: 300; /* Contraste moderno ligero */
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.75) !important; /* Gris suave integrado al fondo */
+            margin-top: 4px;
+            line-height: 1.15;
+        }
+
+        .marca-estudio:hover {
+            opacity: 0.9; /* Sutil feedback visual al posicionar el cursor */
+        }
+
+        .nombre-estudio {
+            font-family: var(--fuente-titulos);
+            color: #ffffff;
+            user-select: none;
+        }
+
+        .nombre-estudio .apellido-principal {
+            display: block;
+            font-weight: 500;
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .nombre-estudio .apellido-secundario {
+            display: block;
+            font-weight: 300;
+            font-size: 0.95rem;
+            letter-spacing: 2.5px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-top: 4px;
+            line-height: 1.2;
+        }
+
+        .contenedor-subtitulo-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .linea-logo {
+            width: 25px;
+            height: 1px;
+            background-color: var(--color-secundario);
+            display: inline-block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav ul li a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            background-color: var(--color-secundario);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+       nav ul li a:hover {
+            color: var(--color-secundario);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* --- BRANDING MINIMALISTA ABSOLUTO ARMONIZADO --- */
+        .marca-estudio {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Separación simétrica adaptada al menú */
+            padding-left: 10px;
+            transition: opacity 0.3s ease;
+            height: 100%;
+        }
+
+        .marca-estudio:hover {
+            opacity: 0.85;
+        }
+
+        /* Sigla insignia en oro satinado con divisor integrado */
+        .sigla-premium {
+            font-family: var(--fuente-titulos);
+            color: var(--color-secundario) !important; /* Oro satinado de la firma */
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            border-right: 1px solid rgba(197, 168, 128, 0.25); /* Fina línea divisoria */
+            padding-right: 20px;
+            line-height: 1;
+            user-select: none;
+        }
+
+        /* Bloque de Apellidos Corporativo */
+        .nombre-estudio {
+            font-family: var(--fuente-titulos);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .nombre-estudio .apellido-principal {
+            display: block;
+            font-weight: 500;
+            font-size: 1.15rem;
+            letter-spacing: 1.5px;
+            line-height: 1.15;
+            color: #ffffff !important; /* Elimina definitivamente el azul eléctrico del navegador */
+        }
+
+        .nombre-estudio .apellido-secundario {
+            display: block;
+            font-weight: 300;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.75) !important; /* Gris suave unificado al fondo */
+            margin-top: 4px;
+            line-height: 1.15;
+        }
+        /* --- PORTADA CON MÁSCARA ANGULAR ASIMÉTRICA --- */
+        .hero-principal {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 140px 8% 180px 8%;
+            clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        }
+
+        .hero-principal h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 3rem;
+            color: #ffffff;
+            font-weight: 400;
+            max-width: 950px;
+            line-height: 1.35;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-principal p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1.15rem;
+            font-weight: 300;
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .boton-premium {
+            display: inline-block;
+            padding: 16px 45px;
+            border: 1px solid var(--color-secundario);
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background: transparent;
+        }
+
+        .boton-premium:hover {
+            background-color: var(--color-secundario);
+            color: var(--color-primario);
+            box-shadow: 0 15px 30px rgba(197, 168, 128, 0.2);
+        }
+
+        /* --- SECCIONES ESTRUCTURALES GENERALES --- */
+        section {
+            padding: 140px 12%;
+            clear: both;
+        }
+
+        .encabezado-seccion {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 90px auto;
+        }
+
+        .encabezado-seccion h2 {
+            font-family: var(--fuente-titulos);
+            font-size: 2.4rem;
+            color: var(--color-primario);
+            font-weight: 500;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .encabezado-seccion .linea-decorativa {
+            width: 40px;
+            height: 1px;
+            background-color: var(--color-secundario);
+            margin: 0 auto 25px auto;
+        }
+
+        .encabezado-seccion p {
+            color: var(--color-texto-suave);
+            font-size: 1rem;
+        }
+
+        /* --- CONTENEDORES INTERNOS --- */
+        .contenedor-estudio {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .texto-estudio p {
+            color: var(--color-texto-oscuro);
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            text-align: justify;
+            font-weight: 300;
+        }
+
+        .lista-valores {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 35px;
+        }
+
+        .tarjeta-valor {
+            border-left: 2px solid var(--color-secundario);
+            padding-left: 25px;
+        }
+
+        .tarjeta-valor h4 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.15rem;
+            color: var(--color-primario);
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .tarjeta-valor p {
+            color: var(--color-texto-suave);
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+
+.grid-corporativo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    height: auto; /* Nos aseguramos de que crezca libremente */
+}
+
+.tarjeta-corporativa {
+    background-color: #ffffff;
+    padding: 55px 40px;
+    border: 1px solid #e2e8f0;
+    /* 👇 ESTADO INICIAL PARA LA ANIMACIÓN (Empiezan invisibles y suben de golpe) */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* 👇 CLASE QUE ACTIVARÁ EL JAVASCRIPT AL HACER SCROLL */
+.tarjeta-corporativa.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tarjeta-corporativa:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-secundario);
+    box-shadow: 0 30px 60px rgba(7, 14, 27, 0.04);
+}
+
+.tarjeta-corporativa h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-primario);
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.tarjeta-corporativa p {
+    color: var(--color-texto-suave);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+        .contenedor-contacto {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 70px;
+        }
+
+        .info-contacto h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.5rem;
+            color: var(--color-primario);
+            margin-bottom: 30px;
+        }
+
+        .bloque-dato {
+            margin-bottom: 25px;
+        }
+
+        .bloque-dato label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--color-secundario);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .bloque-dato p {
+            font-size: 0.95rem;
+        }
+
+        .formulario-contacto {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .campo-ancho {
+            grid-column: span 2;
+        }
+
+        .formulario-contacto input, .formulario-contacto textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            font-family: var(--fuente-cuerpo);
+            font-size: 0.85rem;
+            outline: none;
+            background-color: var(--color-fondo-claro);
+            transition: all 0.3s;
+        }
+
+        .formulario-contacto input:focus, .formulario-contacto textarea:focus {
+            border-color: var(--color-secundario);
+            background-color: #ffffff;
+        }
+
+        .boton-enviar {
+            grid-column: span 2;
+            padding: 16px;
+            background-color: var(--color-primario);
+            color: #ffffff;
+            border: none;
+            font-family: var(--fuente-cuerpo);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .boton-enviar:hover {
+            background-color: #1a2a44;
+        }
+.bloques-footer-fijo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .columna-footer-fija h4 {
+            font-family: var(--fuente-titulos);
+            color: var(--color-secundario);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .columna-footer-fija p, .columna-footer-fija ul li a {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+            text-decoration: none;
+        }
+
+        .columna-footer-fija ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .columna-footer-fija ul li {
+            margin-bottom: 10px;
+        }
+
+        .columna-footer-fija ul li a:hover {
+            color: var(--color-secundario);
+        }
+
+        @media (max-width: 992px) {
+            header { padding: 20px 5%; flex-direction: column; gap: 15px; }
+            nav ul { gap: 20px; }
+            section { padding: 100px 5%; }
+            .hero-principal { clip-path: none; -webkit-clip-path: none; padding-bottom: 100px; }
+            .contenedor-estudio, .contenedor-contacto { grid-template-columns: 1fr; gap: 50px; }
+            .formulario-contacto input, .formulario-contacto textarea, .boton-enviar { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+              <!-- CONTENEDOR DE IDENTIDAD MINIMALISTA TOTALMENTE ARMONIZADO -->
+        <a href="#" class="marca-estudio">
+            <!-- Sigla RGM en oro satinado -->
+            <div class="sigla-premium">RGM</div>
+            
+            <!-- Estructura limpia de apellidos en blanco puro -->
+            <div class="nombre-estudio">
+                <span class="apellido-principal">RIGANTI, GEILER</span>
+                <span class="apellido-secundario">& MÁRQUEZ ALLURALDE</span>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#estudio">El Estudio</a></li>
+                <li><a href="#practicas">Prácticas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- PORTADA CON VIDEO DE FONDO Y MÁSCARA ANGULAR FORZADA -->
+    <section id="inicio" class="hero-principal" style="position: relative; overflow: hidden; background-color: #070e1b; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+        
+        <!-- El elemento de video con parámetros de forzado institucional -->
+        <!-- 💡 CORRECCIÓN: Subimos el z-index a 1 para que pase al frente del fondo oscuro de la sección -->
+        <video autoplay muted loop playsinline preload="auto" style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; z-index: 1; transform: translate(-50%, -50%); object-fit: cover;">
+            <!-- ====== ATENCIÓN: REEMPLAZA "video-estudio.mp4" POR EL NOMBRE EXACTO DE TU ARCHIVO ====== -->
+            <source src="video-rgma.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+
+        <!-- Capa oscura translúcida para garantizar el perfecto contraste de las letras blancas -->
+        <!-- 💡 CORRECCIÓN: Subimos el z-index a 2 para que tape al video pero no a las letras -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(7, 14, 27, 0.72), rgba(7, 14, 27, 0.88)); z-index: 2;"></div>
+
+        <!-- Textos institucionales equilibrados sobre el video ambiental -->
+        <!-- 💡 CORRECCIÓN: Envolvemos en un contenedor con z-index: 3 para asegurar que queden arriba de todo -->
+        <div style="position: relative; z-index: 3; text-align: center; color: #ffffff; max-width: 900px; padding: 0 20px;">
+            <h1>Trayectoria Legal con una Perspectiva de Vanguardia</h1>
+            <p style="margin: 20px 0 40px 0;">Brindamos soluciones jurídicas estratégicas de alta complejidad para empresas y corporaciones que operan en mercados globales dinámicos.</p>
+            <a href="#contacto" class="boton-premium">Agendar consulta confidencial</a>
+        </div>
+    </section>
+
+    <section id="estudio">
+        <div class="encabezado-seccion">
+ <h2>El Estudio</h2>
+            <div class="linea-decorativa"></div>
+            <p>Un compromiso absoluto con la excelencia técnica y los más altos estándares éticos de la práctica jurídica internacional.</p>
+        </div>
+        <div class="contenedor-estudio">
+            <div class="texto-estudio">
+                <p>Somos una de las firmas jurídicas corporativas líderes de la región, brindando servicios de asesoramiento legal empresarial de excelencia técnica y con un profundo entendimiento de los mercados comerciales dinámicos.</p>
+                <p>Nuestra práctica se caracteriza por estructurar de forma integral las defensas litigiosas y planificaciones fiscales de nuestros clientes, combinando la agilidad procesal de vanguardia con un absoluto estándar ético internacional.</p>
+            </div>
+            <div class="lista-valores">
+                <div class="tarjeta-valor">
+                    <h4>Rigurosidad Técnica</h4>
+                    <p>Cada dictamen y estrategia procesal es analizada al máximo detalle técnico por nuestros especialistas.</p>
+                </div>
+                <div class="tarjeta-valor">
+                    <h4>Alcance Corporativo</h4>
+                    <p>Respuestas legales diseñadas a medida para potenciar y blindar el crecimiento empresarial.</p>
+                </div>
+                <div class="tarjeta-valor">
+                    <h4>Transparencia e Integridad</h4>
+                    <p>Estrecha confidencialidad y una ética inquebrantable en cada gestión institucional encomendada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- SECCIÓN ÁREAS DE PRÁCTICA -->
+<section id="practicas" style="background-color: var(--color-fondo-claro);">
+    <div class="encabezado-seccion">
+        <h2>Áreas de Práctica</h2>
+        <div class="linea-decorativa"></div>
+        <p>Asesoramiento multidisciplinario de alta complejidad para transacciones corporativas y defensas de envergadura.</p>
+    </div>
+    <div class="grid-corporativo">
+        <!-- 3 Tarjetas Iniciales -->
+        <div class="tarjeta-corporativa">
+            <h3>Derecho Corporativo & M&A</h3>
+            <p>Estructuración de fusiones, adquisiciones, auditorías legales corporativas de alta gama y contratos societarios complejos.</p>
+        </div>
+        <div class="tarjeta-corporativa">
+            <h3>Bancos & Finanzas</h3>
+            <p>Asesoramiento regulatorio bancario, estructuración de fideicomisos comerciales y operaciones financieras internacionales.</p>
+        </div>
+        <div class="tarjeta-corporativa">
+            <h3>Litigios & Solución de Controversias</h3>
+            <p>Resolución y representación robusta ante disputas judiciales complejas en fueros comerciales, civiles y administrativos.</p>
+        </div>
+
+        <!-- 🚀 Las 3 Tarjetas Nuevas (Agregadas correctamente adentro del grid) -->
+        <div class="tarjeta-corporativa">
+            <h3>Derecho Laboral & Empresa</h3>
+            <p>Asesoría en contratación estratégica, reestructuraciones laborales, auditorías preventivas y defensa en litigios de alta complejidad.</p>
+        </div>
+        <div class="tarjeta-corporativa">
+            <h3>Propiedad Intelectual</h3>
+            <p>Registro y protección de marcas, patentes, derechos de autor, secretos comerciales y defensa legal contra la competencia desleal.</p>
+        </div>
+        <div class="tarjeta-corporativa">
+            <h3>Derecho Tributario & Fiscal</h3>
+            <p>Planeamiento impositivo local e internacional, consultoría estratégica y representación ante inspecciones u organismos fiscales.</p>
+        </div>
+    </div> <!-- Cierre del grid-corporativo -->
+</section> <!-- Cierre de la sección prácticas -->
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto">
+        <div class="encabezado-seccion">
+            <h2>Contacto</h2>
+            <div class="linea-decorativa"></div>
+            <p>Canales institucionales habilitados para coordinar consultas corporativas con nuestro equipo directivo.</p>
+        </div>
+        <div class="contenedor-contacto">
+            <div class="info-contacto">
+                <h3>Sede Central</h3>
+                <div class="bloque-dato">
+                    <label>Ubicación</label>
+                    <p>Av. Corrientes 450, Piso 10, CABA, Argentina.</p>
+                </div>
+                <div class="bloque-dato">
+                    <label>Teléfono Corporativo</label>
+                    <p>+54 (11) 4321-5555</p>
+                </div>
+                <div class="bloque-dato">
+                    <label>Canal Oficial Electrónico</label>
+                    <p>contacto@rigantigeiler.com</p>
+                </div>
+            </div>
+            <div>
+                <form class="formulario-contacto" onsubmit="event.preventDefault(); alert('Su requerimiento institucional ha sido enviado con éxito de manera confidencial.');">
+                    <input type="text" placeholder="Nombre y Apellido" required>
+                    <input type="email" placeholder="Correo corporativo" required>
+                    <div class="campo-ancho"><input type="text" placeholder="Empresa / Entidad Jurídica"></div>
+                    <div class="campo-ancho"><textarea placeholder="Detalle su consulta de forma estrictamente informativa..." rows="5" required></textarea></div>
+                    <button type="submit" class="boton-enviar">Enviar Requerimiento</button>
+                </form>
+            </div>
+        </div>
+    </section>
+ <!-- PIE DE PÁGINA (FOOTER COMPLETAMENTE CONSOLIDADO) -->
+    <footer style="background-color: var(--color-primario); color: #ffffff; padding: 80px 12% 40px 12%; border-top: 1px solid rgba(255,255,255,0.05);">
+        
+        <!-- ESTILOS INTERNOS AISLADOS PARA EL FOOTER -->
+        <style>
+            .bloques-footer-fijo {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 50px;
+                margin-bottom: 60px;
+                text-align: left;
+            }
+            .columna-footer-fija h4 {
+                font-family: var(--fuente-titulos);
+                color: var(--color-secundario);
+                font-size: 1rem;
+                margin-bottom: 20px;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+            }
+            .columna-footer-fija p {
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 0.85rem;
+                line-height: 1.8;
+                font-weight: 300;
+            }
+            .columna-footer-fija ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .columna-footer-fija ul li {
+                margin-bottom: 12px;
+            }
+            .columna-footer-fija ul li a {
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 0.85rem;
+                text-decoration: none;
+                transition: color 0.3s ease;
+                font-weight: 300;
+            }
+            .columna-footer-fija ul li a:hover {
+                color: var(--color-secundario);
+            }
+        </style>
+
+        <div class="bloques-footer-fijo">
+            <div class="columna-footer-fija">
+                <h4>LA FIRMA</h4>
+                <p>Riganti, Geiler & Márquez Alluralde Abogados proporciona consultoría y defensa legal corporativa institucional de alta complejidad con un firme alcance global.</p>
+            </div>
+            <div class="columna-footer-fija">
+                <h4>ÁREAS CLAVE</h4>
+                <ul>
+                    <li><a href="#practicas">Derecho Corporativo & M&A</a></li>
+                    <li><a href="#practicas">Bancos & Finanzas</a></li>
+                    <li><a href="#practicas">Litigios & Arbitrajes</a></li>
+                </ul>
+            </div>
+            <div class="columna-footer-fija">
+                <h4>COBERTURA GLOBAL</h4>
+                <p>Mantenemos una red activa de corresponsalías y alianzas estratégicas operativas en las principales capitales financieras de América y Europa.</p>
+            </div>
+        </div>
+        
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; text-align: center; font-size: 0.8rem; color: rgba(255, 255, 255, 0.4); font-weight: 300;">
+            <p>© 2026 Riganti, Geiler & Márquez Alluralde - Abogados. Todos los derechos reservados. | Políticas de Confidencialidad</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVIDAD Y OPTIMIZACIÓN VISUAL (JAVASCRIPT) -->
+    <script>
+        // 1. Reducción dinámica de la barra superior al hacer scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '15px 8%';
+                header.style.backgroundColor = 'rgba(10, 17, 32, 0.99)';
+                header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.2)';
+            } else {
+                header.style.padding = '25px 8%';
+                header.style.backgroundColor = 'rgba(10, 17, 32, 0.96)';
+                header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.05)';
+            }
+        });
+         </script> 
+
+     <!-- 🎥 ANIMACIÓN SCROLL REVEAL Y RECONFIGURACIÓN DE REFRESCO CORREGIDO -->
+<script>
+    const tarjetas = document.querySelectorAll('.tarjeta-corporativa');
+    const opcionesObservador = { threshold: 0.15, rootMargin: "0px 0px -40px 0px" };
+
+    const observador = new IntersectionObserver(function(entradas, observador) {
+        entradas.forEach(entrada => {
+            if (!entrada.isIntersecting) return;
+            
+            // Añade la clase que hace visible la tarjeta al hacer scroll
+            entrada.target.classList.add('visible'); 
+            observador.unobserve(entrada.target);
+        });
+    }, opcionesObservador);
+
+    // Activamos el observador para cada una de las 6 tarjetas
+    tarjetas.forEach(tarjeta => {
+        observador.observe(tarjeta);
+    });
+
+    // Forzar al navegador a posicionarse arriba de todo al actualizar la página
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+</script> 
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riganti, Geiler & Márquez Alluralde - Abogados</title>
+    <!-- Fuentes Corporativas de Élite -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <style>
         /* --- VARIABLES DE DISEÑO PREMIUM (ESTILO MARVAL & BECCAR VARELA) --- */
         :root {
@@ -795,5 +1746,7 @@
     }
     window.scrollTo(0, 0);
 </script> 
+</body>
+</html>
 </body>
 </html>
