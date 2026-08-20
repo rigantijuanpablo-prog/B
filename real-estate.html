@@ -81,24 +81,6 @@
             color: var(--color-secundario);
             font-weight: bold;
         }
-        .cta-interno {
-            padding: 70px 12%;
-            background-color: var(--color-primario);
-            color: #ffffff;
-            text-align: center;
-        }
-        .btn-cta-interno {
-            display: inline-block;
-            padding: 14px 40px;
-            background-color: var(--color-secundario);
-            color: var(--color-primario);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            transition: all 0.3s;
-        }
         @media (max-width: 992px) {
             .hero-interno { padding: 140px 8% 60px 8%; }
             .contenedor-subareas { padding: 60px 8%; grid-template-columns: 1fr; }
@@ -123,12 +105,13 @@
     </header>
 
     <main>
+        <!-- SECCIÓN 1: PORTADA -->
         <section class="hero-interno">
             <div class="linea-separadora"></div>
             <h1>Real Estate y Desarrollos</h1>
-            <p>Estructuramos la arquitectura jurídica, fiduciaria y fiscal de emprendimientos inmobiliarios complejos, parques logísticos y desarrollos de alta gama. Traducimos las necesidades de constructores e inversores en contratos sólidos y vehiculizamos los modelos de financiamiento e inversión de la nueva era digital en la región.</p>
+            <p>Estructuramos la arquitectura jurídica, fiduciaria y fiscal de emprendimientos inmobiliarios complejos, parques logísticos y desarrollos de alta gama. Traducimos las necesidades de constructores e inversores en contratos sólidos y vehiculizamos los modelos de financiamiento e inversión de la nueva era digital en la región Mercosur.</p>
         </section>
-        <!-- SECCIÓN 2: DESGLOSE DE SERVICIOS TÉCNICOS -->
+        !-- SECCIÓN 2: DESGLOSE DE SERVICIOS TÉCNICOS -->
         <section class="contenedor-subareas">
             <!-- Tarjeta 1 -->
             <div class="tarjeta-subarea">
@@ -159,62 +142,34 @@
                 </ul>
             </div>
         </section>
-
-                <!-- SECCIÓN 3: LLAMADO A LA ACCIÓN CON IMAGEN DE FONDO PREMIUM -->
-        <section class="cta-interno" style="
-            position: relative; 
-            padding: 120px 12%; 
-            background-image: linear-gradient(rgba(7, 14, 27, 0.82), rgba(7, 14, 27, 0.88)), url('https://unsplash.com'); 
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed;
-            color: #ffffff; 
-            text-align: center;
-            overflow: hidden;
-        ">
+        <!-- SECCIÓN 3: LLAMADO A LA ACCIÓN CON IMAGEN DE FONDO PREMIUM -->
+        <section class="cta-interno" style="position: relative; padding: 120px 12%; background-image: linear-gradient(rgba(7, 14, 27, 0.82), rgba(7, 14, 27, 0.88)), url('https://unsplash.com'); background-size: cover; background-position: center; background-attachment: fixed; color: #ffffff; text-align: center; overflow: hidden;">
             <div style="position: relative; z-index: 2; max-width: 750px; margin: 0 auto;">
-                <h2 style="font-family: var(--fuente-titulos); font-size: 2rem; color: var(--color-secundario, #c5a880); margin-bottom: 20px; font-weight: 500; letter-spacing: 0.5px;">
-                    ¿Está planificando un desarrollo inmobiliario o un modelo de inversión digital?
-                </h2>
+                <h2 style="font-family: var(--fuente-titulos); font-size: 2rem; color: var(--color-secundario, #c5a880); margin-bottom: 20px; font-weight: 500; letter-spacing: 0.5px;">¿Está planificando un desarrollo inmobiliario o un modelo de inversión digital?</h2>
                 <div style="width: 50px; height: 2px; background-color: var(--color-secundario, #c5a880); margin: 0 auto 25px auto;"></div>
-                <p style="font-family: var(--fuente-cuerpo); font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 35px; font-weight: 300;">
-                    Agende una sesión de consultoría confidencial con nuestro equipo especializado en estructuración fiduciaria, transacciones de múltiples jurisdicciones y negocios de Real Estate.
-                </p>
-                <a href="index.html#contacto" class="btn-cta-interno" style="
-                    display: inline-block; 
-                    padding: 14px 40px; 
-                    background-color: var(--color-secundario, #c5a880); 
-                    color: var(--color-primario, #070e1b); 
-                    text-decoration: none; 
-                    font-weight: 500; 
-                    font-size: 0.85rem; 
-                    text-transform: uppercase; 
-                    letter-spacing: 1.5px; 
-                    border-radius: 2px; 
-                    transition: all 0.3s ease;
-                    border: 1px solid var(--color-secundario, #c5a880);
-                " onmouseover="this.style.backgroundColor='transparent'; this.style.color='var(--color-secundario)';" onmouseout="this.style.backgroundColor='var(--color-secundario)'; this.style.color='var(--color-primario)';">
-                    Iniciar Consulta
-                </a>
+                <p style="font-family: var(--fuente-cuerpo); font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 35px; font-weight: 300;">Agende una sesión de consultoría confidencial con nuestro equipo especializado en estructuración fiduciaria, transacciones de múltiples jurisdicciones y negocios de Real Estate.</p>
+                <a href="index.html#contacto" class="btn-cta-interno" style="display: inline-block; padding: 14px 40px; background-color: var(--color-secundario, #c5a880); color: var(--color-primario, #070e1b); text-decoration: none; font-weight: 500; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 2px; transition: all 0.3s ease; border: 1px solid var(--color-secundario, #c5a880);" onmouseover="this.style.backgroundColor='transparent'; this.style.color='var(--color-secundario)';" onmouseout="this.style.backgroundColor='var(--color-secundario)'; this.style.color='var(--color-primario)';">Iniciar Consulta</a>
             </div>
         </section>
+    </main>
 
     <!-- PIE DE PÁGINA (FOOTER CON ENFOQUE MERCOSUR) -->
     <footer style="background-color: var(--color-primario); color: #ffffff; padding: 60px 12% 40px 12%; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--fuente-cuerpo);">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-bottom: 40px; text-align: left;">
             <div>
                 <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px;">LA FIRMA</h4>
-                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">Riganti, Geiler & Márquez Alluralde Abogados proporciona consultoría y defensa legal corporativa institucional de alta complejidad con un enfoque federal y regional.</p>
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">Riganti, Geiler & Márquez Alluralde Abogados proporciona soluciones corporativas de alcance nacional con proyección regional, respondiendo a la alta complejidad jurídica y financiera actual.</p>
             </div>
             <div>
                 <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px;">ÁREAS CLAVE</h4>
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem;">
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Startups y Negocios Digitales</a></li>
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Creadores de Contenido e Influencers</a></li>
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Derecho Deportivo</a></li>
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Inteligencia Artificial y Tech</a></li>
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Propiedad Intelectual Digital</a></li>
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Derecho de la Salud y Amparos</a></li>
+                    <li style="margin-bottom: 10px;"><a href="startups.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Startups y Negocios Digitales</a></li>
+                    <li style="margin-bottom: 10px;"><a href="creadores.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Creadores de Contenido e Influencers</a></li>
+                    <li style="margin-bottom: 10px;"><a href="deporte.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Derecho Deportivo</a></li>
+                    <li style="margin-bottom: 10px;"><a href="inteligencia-artificial.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Inteligencia Artificial y Tech</a></li>
+                    <li style="margin-bottom: 10px;"><a href="propiedad-intelectual.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Propiedad Intelectual Digital</a></li>
+                    <li style="margin-bottom: 10px;"><a href="salud-amparos.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Derecho de la Salud y Amparos</a></li>
+                    <li style="margin-bottom: 10px;"><a href="real-estate.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Real Estate y Desarrollos</a></li>
                 </ul>
             </div>
             <div>
@@ -227,7 +182,6 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVIDAD COMPARTIDA -->
     <script>
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
@@ -241,4 +195,3 @@
         });
     </script>
 </body>
-</html>
