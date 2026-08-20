@@ -146,9 +146,9 @@
                 </ul>
             </div>
         </section>
-        <!-- SECCIÓN 3: LLAMADO A LA ACCIÓN CON IMAGEN DE FONDO PREMIUM -->
-        <section class="cta-interno" style="position: relative; padding: 120px 12%; background-image: linear-gradient(rgba(7, 14, 27, 0.82), rgba(7, 14, 27, 0.88)), url('real-estate-imagen.jpg'); background-size: cover; background-position: center; background-attachment: fixed; color: #ffffff; text-align: center; overflow: hidden;">
-            <div style="position: relative; z-index: 2; max-width: 750px; margin: 0 auto;">
+       <!-- SECCIÓN 3: LLAMADO A LA ACCIÓN CON FILTRO Y ALTURA CORREGIDA -->
+        <section class="cta-interno" style="position: relative; padding: 100px 12%; background-image: linear-gradient(rgba(7, 14, 27, 0.85), rgba(7, 14, 27, 0.9)), url('https://unsplash.com'); background-size: cover; background-position: center; background-attachment: fixed; color: #ffffff; text-align: center; overflow: hidden; min-height: 350px; display: flex; align-items: center; justify-content: center;">
+            <div style="position: relative; z-index: 2; max-width: 750px; margin: 0 auto; width: 100%;">
                 <h2 style="font-family: var(--fuente-titulos); font-size: 2rem; color: var(--color-secundario, #c5a880); margin-bottom: 20px; font-weight: 500; letter-spacing: 0.5px;">¿Está planificando un desarrollo inmobiliario o un modelo de inversión digital?</h2>
                 <div style="width: 50px; height: 2px; background-color: var(--color-secundario, #c5a880); margin: 0 auto 25px auto;"></div>
                 <p style="font-family: var(--fuente-cuerpo); font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 35px; font-weight: 300;">Agende una sesión de consultoría confidencial con nuestro equipo especializado en estructuración fiduciaria, transacciones de múltiples jurisdicciones y negocios de Real Estate.</p>
@@ -156,46 +156,59 @@
             </div>
         </section>
     </main>
-
-    <!-- PIE DE PÁGINA (FOOTER CON ENFOQUE MERCOSUR) -->
-    <footer style="background-color: var(--color-primario); color: #ffffff; padding: 60px 12% 40px 12%; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--fuente-cuerpo);">
+    <!-- PIE DE PÁGINA (FOOTER SANEADO CON ENFOQUE MERCOSUR) -->
+    <footer style="background-color: var(--color-primario, #070e1b); color: #ffffff; padding: 60px 12% 40px 12%; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--fuente-cuerpo); position: relative; z-index: 10;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-bottom: 40px; text-align: left;">
-            <div>
-                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px;">LA FIRMA</h4>
-                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">Riganti, Geiler & Márquez Alluralde Abogados proporciona soluciones corporativas de alcance nacional con proyección regional, respondiendo a la alta complejidad jurídica y financiera actual.</p>
+            
+            <!-- Columna 1 -->
+            <div class="columna-footer-fija">
+                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px; font-weight: 500;">LA FIRMA</h4>
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8; font-weight: 300; margin: 0;">Riganti, Geiler & Márquez Alluralde Abogados proporciona soluciones corporativas de alcance nacional con proyección regional, respondiendo a la alta complejidad jurídica y financiera actual.</p>
             </div>
-            <div>
-                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px;">ÁREAS CLAVE</h4>
+
+            <!-- Columna 2 -->
+            <div class="columna-footer-fija">
+                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px; font-weight: 500;">ÁREAS CLAVE</h4>
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem;">
-                    <li style="margin-bottom: 10px;"><a href="startups.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Startups y Negocios Digitales</a></li>
-                    <li style="margin-bottom: 10px;"><a href="creadores.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Creadores de Contenido e Influencers</a></li>
-                    <li style="margin-bottom: 10px;"><a href="deporte.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Derecho Deportivo</a></li>
-                    <li style="margin-bottom: 10px;"><a href="inteligencia-artificial.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Inteligencia Artificial y Tech</a></li>
-                    <li style="margin-bottom: 10px;"><a href="propiedad-intelectual.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Propiedad Intelectual Digital</a></li>
-                    <li style="margin-bottom: 10px;"><a href="salud-amparos.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Derecho de la Salud y Amparos</a></li>
-                    <li style="margin-bottom: 10px;"><a href="real-estate.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Real Estate y Desarrollos</a></li>
+                    <li style="margin-bottom: 10px;"><a href="startups.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-weight: 300;">Startups y Negocios Digitales</a></li>
+                    <li style="margin-bottom: 10px;"><a href="creadores.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-weight: 300;">Creadores de Contenido e Influencers</a></li>
+                    <li style="margin-bottom: 10px;"><a href="deporte.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-weight: 300;">Derecho Deportivo</a></li>
+                    <li style="margin-bottom: 10px;"><a href="inteligencia-artificial.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-weight: 300;">Inteligencia Artificial y Tech</a></li>
+                    <li style="margin-bottom: 10px;"><a href="propiedad-intelectual.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-weight: 300;">Propiedad Intelectual Digital</a></li>
+                    <li style="margin-bottom: 10px;"><a href="salud-amparos.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-weight: 300;">Derecho de la Salud y Amparos</a></li>
+                    <li style="margin-bottom: 10px;"><a href="real-estate.html" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-weight: 300;">Real Estate y Desarrollos</a></li>
                 </ul>
             </div>
-            <div>
-                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px;">ENFOQUE MERCOSUR</h4>
-                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">Mantenemos una red activa de corresponsalías y alianzas estratégicas operativas en los principales centros comerciales y productivos del país y los mercados de la región.</p>
+
+            <!-- Columna 3 -->
+            <div class="columna-footer-fija">
+                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px; font-weight: 500;">ENFOQUE MERCOSUR</h4>
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8; font-weight: 300; margin: 0;">Mantenemos una red activa de corresponsalías y alianzas estratégicas operativas en los principales centros comerciales y productivos del país y los mercados de la región.</p>
             </div>
         </div>
+
+        <!-- Barra inferior del Copyright -->
         <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; text-align: center; font-size: 0.8rem; color: rgba(255, 255, 255, 0.4); font-weight: 300;">
-            <p>© <script>document.write(new Date().getFullYear());</script> Riganti, Geiler & Márquez Alluralde - Abogados. Todos los derechos reservados.</p>
+            <p style="margin: 0;">© <script>document.write(new Date().getFullYear());</script> Riganti, Geiler & Márquez Alluralde - Abogados. Todos los derechos reservados. | Políticas de Confidencialidad</p>
         </div>
     </footer>
 
+    <!-- INTERACTIVIDAD DE MENÚ SUPERIOR -->
     <script>
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.padding = '15px 8%';
-                header.style.backgroundColor = 'rgba(10, 17, 32, 0.99)';
-            } else {
-                header.style.padding = '25px 8%';
-                header.style.backgroundColor = 'rgba(10, 17, 32, 0.96)';
+            if (header) {
+                if (window.scrollY > 50) {
+                    header.style.padding = '15px 4%';
+                    header.style.backgroundColor = 'rgba(10, 17, 32, 0.99)';
+                } else {
+                    header.style.padding = '20px 4%';
+                    header.style.backgroundColor = 'rgba(10, 17, 32, 0.96)';
+                }
             }
         });
     </script>
 </body>
+</html>
+
+ 
