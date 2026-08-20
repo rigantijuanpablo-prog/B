@@ -81,24 +81,6 @@
             color: var(--color-secundario);
             font-weight: bold;
         }
-        .cta-interno {
-            padding: 70px 12%;
-            background-color: var(--color-primario);
-            color: #ffffff;
-            text-align: center;
-        }
-        .btn-cta-interno {
-            display: inline-block;
-            padding: 14px 40px;
-            background-color: var(--color-secundario);
-            color: var(--color-primario);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            transition: all 0.3s;
-        }
         @media (max-width: 992px) {
             .hero-interno { padding: 140px 8% 60px 8%; }
             .contenedor-subareas { padding: 60px 8%; grid-template-columns: 1fr; }
@@ -107,17 +89,17 @@
 </head>
 <body>
 
-    <header style="position: fixed; top: 0; left: 0; width: 100%; padding: 25px 8%; background-color: rgba(10, 17, 32, 0.96); display: flex; justify-content: space-between; align-items: center; z-index: 1000; transition: all 0.3s; border-bottom: 1px solid rgba(255,255,255,0.03);">
-        <div style="font-family: var(--fuente-titulos); color: #ffffff; font-size: 1.15rem; font-weight: 500; letter-spacing: 1px;">
+    <header style="position: fixed; top: 0; left: 0; width: 100%; padding: 20px 4%; background-color: rgba(10, 17, 32, 0.96); display: flex; justify-content: space-between; align-items: center; z-index: 1000; transition: all 0.3s; border-bottom: 1px solid rgba(255,255,255,0.03); gap: 20px; box-sizing: border-box;">
+        <div style="font-family: var(--fuente-titulos); color: #ffffff; font-size: 1.05rem; font-weight: 500; letter-spacing: 1px; flex-shrink: 0; white-space: nowrap;">
             RIGANTI, GEILER & MÁRQUEZ ALLURALDE
             <span style="display: block; font-size: 0.65rem; color: var(--color-secundario); letter-spacing: 3px; margin-top: 4px;">ABOGADOS</span>
         </div>
-        <nav>
-            <ul style="display: flex; list-style: none; gap: 35px; margin: 0;">
-                <li><a href="index.html#inicio" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">INICIO</a></li>
-                <li><a href="index.html#estudio" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">EL ESTUDIO</a></li>
-                <li><a href="index.html#practicas" style="color: var(--color-secundario); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">ÁREAS</a></li>
-                <li><a href="index.html#contacto" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">CONTACTO</a></li>
+        <nav style="display: block; margin-right: 40px; flex-shrink: 0;">
+            <ul style="display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; white-space: nowrap;">
+                <li><a href="index.html#inicio" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; font-weight: 300;">INICIO</a></li>
+                <li><a href="index.html#estudio" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; font-weight: 300;">EL ESTUDIO</a></li>
+                <li><a href="index.html#practicas" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; font-weight: 300;">ÁREAS</a></li>
+                <li><a href="index.html#contacto" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; font-weight: 300;">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
@@ -126,9 +108,9 @@
         <section class="hero-interno">
             <div class="linea-separadora"></div>
             <h1>Derecho de la Salud y Amparos</h1>
-            <p>Estructuramos litigios estratégicos de alta complejidad contra obras sociales y prepagas, y brindamos asesoramiento preventivo a instituciones médicas. Respondemos con celeridad jurídica ante situaciones críticas de falta de cobertura y guiamos los desafíos ético-legales de la medicina moderna a nivel federal.</p>
+            <p>Estructuramos litigios de alta celeridad y complejidad contra obras sociales y prepagas, y brindamos asesoramiento preventivo a instituciones médicas. Respondemos con urgencia jurídica ante situaciones de falta de cobertura, guiando tus derechos en múltiples jurisdicciones.</p>
         </section>
-         <!-- SECCIÓN 2: DESGLOSE DE SERVICIOS TÉCNICOS -->
+        <!-- SECCIÓN 2: DESGLOSE DE SERVICIOS TÉCNICOS -->
         <section class="contenedor-subareas">
             <!-- Tarjeta 1 -->
             <div class="tarjeta-subarea">
@@ -155,57 +137,69 @@
                 <ul>
                     <li><strong>Ecosistemas HealthTech:</strong> Asesoramos a plataformas médicas en el encuadre legal de la telemedicina, recetas digitales y firma electrónica.</li>
                     <li><strong>Gobernanza de datos médicos:</strong> Estructuramos protocolos de privacidad robustos para el resguardo de historias clínicas electrónicas y datos sensibles según la Ley 25.326.</li>
-                    <li><strong>Ensayos clínicos y responsabilidad:</strong> Brindamos consultoría estratégica a laboratorios y centros médicos en el marco normativo de fases de investigación clínica.</li>
                 </ul>
             </div>
         </section>
-
-        <!-- SECCIÓN 3: LLAMADO A LA ACCIÓN -->
-        <section class="cta-interno">
-            <h2 style="font-family: var(--fuente-titulos); margin-bottom: 15px;">¿Enfrenta una negativa de cobertura o un desafío en HealthTech?</h2>
-            <p>Agende una consulta confidencial de carácter urgente para evaluar las vías de acción inmediata ante el sistema de salud.</p>
-            <a href="index.html#contacto" class="btn-cta-interno">Iniciar Consulta</a>
+        <!-- SECCIÓN 3: LLAMADO A LA ACCIÓN CON IMAGEN DE FONDO PREMIUM -->
+        <section class="cta-interno" style="position: relative; padding: 120px 12%; background-image: linear-gradient(rgba(7, 14, 27, 0.85), rgba(7, 14, 27, 0.9)), url('salud-1-imagen.jpg'); background-size: cover; background-position: center; background-attachment: fixed; color: #ffffff; text-align: center; overflow: hidden; min-height: 350px; display: flex; align-items: center; justify-content: center;">
+            <div style="position: relative; z-index: 2; max-width: 750px; margin: 0 auto; width: 100%;">
+                <h2 style="font-family: var(--fuente-titulos); font-size: 2rem; color: var(--color-secundario, #c5a880); margin-bottom: 20px; font-weight: 500; letter-spacing: 0.5px;">¿Enfrenta una negativa de cobertura o un desafío en HealthTech?</h2>
+                <div style="width: 50px; height: 2px; background-color: var(--color-secundario, #c5a880); margin: 0 auto 25px auto;"></div>
+                <p style="font-family: var(--fuente-cuerpo); font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 35px; font-weight: 300;">Agende una consulta confidencial de carácter urgente para evaluar las vías de acción y medidas cautelares inmediatas en múltiples jurisdicciones ante el sistema de salud.</p>
+                <a href="index.html#contacto" class="btn-cta-interno" style="display: inline-block; padding: 14px 40px; background-color: var(--color-secundario, #c5a880); color: var(--color-primario, #070e1b); text-decoration: none; font-weight: 500; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 2px; transition: all 0.3s ease; border: 1px solid var(--color-secundario, #c5a880);" onmouseover="this.style.backgroundColor='transparent'; this.style.color='var(--color-secundario)';" onmouseout="this.style.backgroundColor='var(--color-secundario)'; this.style.color='var(--color-primario)';">Iniciar Consulta</a>
+            </div>
         </section>
     </main>
 
-    <!-- PIE DE PÁGINA (FOOTER CON ENFOQUE MERCOSUR) -->
-    <footer style="background-color: var(--color-primario); color: #ffffff; padding: 60px 12% 40px 12%; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--fuente-cuerpo);">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-bottom: 40px; text-align: left;">
-            <div>
-                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px;">LA FIRMA</h4>
-                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">Riganti, Geiler & Márquez Alluralde Abogados proporciona consultoría y defensa legal corporativa institucional de alta complejidad con un enfoque federal y regional.</p>
+    <!-- PIE DE PÁGINA (FOOTER CON FONDO OSCURO PREMIUM) -->
+    <footer style="background-color: #070e1b; color: #ffffff; padding: 80px 12% 40px 12%; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--fuente-cuerpo); position: relative; z-index: 10;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-bottom: 50px; text-align: left;">
+            
+            <!-- Columna 1 -->
+            <div class="columna-footer-fija">
+                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px; font-weight: 500; letter-spacing: 0.5px;">LA FIRMA</h4>
+                <p style="color: rgba(255, 255, 255, 0.65); font-size: 0.85rem; line-height: 1.8; font-weight: 300; margin: 0;">Riganti, Geiler & Márquez Alluralde Abogados proporciona soluciones corporativas de alcance nacional con proyección regional, respondiendo a la alta complejidad jurídica y financiera actual.</p>
             </div>
-            <div>
-                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px;">ÁREAS CLAVE</h4>
+
+            <!-- Columna 2 -->
+            <div class="columna-footer-fija">
+                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px; font-weight: 500; letter-spacing: 0.5px;">ÁREAS CLAVE</h4>
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem;">
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Startups y Negocios Digitales</a></li>
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Creadores de Contenido e Influencers</a></li>
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Derecho Deportivo</a></li>
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Inteligencia Artificial y Tech</a></li>
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Propiedad Intelectual Digital</a></li>
-                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Derecho de la Salud y Amparos</a></li>
+                    <li style="margin-bottom: 12px;"><a href="startups.html" style="color: rgba(255, 255, 255, 0.65); text-decoration: none; font-weight: 300; transition: color 0.3s;" onmouseover="this.style.color='var(--color-secundario)'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">Startups y Negocios Digitales</a></li>
+                    <li style="margin-bottom: 12px;"><a href="creadores.html" style="color: rgba(255, 255, 255, 0.65); text-decoration: none; font-weight: 300; transition: color 0.3s;" onmouseover="this.style.color='var(--color-secundario)'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">Creadores de Contenido e Influencers</a></li>
+                    <li style="margin-bottom: 12px;"><a href="deporte.html" style="color: rgba(255, 255, 255, 0.65); text-decoration: none; font-weight: 300; transition: color 0.3s;" onmouseover="this.style.color='var(--color-secundario)'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">Derecho Deportivo</a></li>
+                    <li style="margin-bottom: 12px;"><a href="inteligencia-artificial.html" style="color: rgba(255, 255, 255, 0.65); text-decoration: none; font-weight: 300; transition: color 0.3s;" onmouseover="this.style.color='var(--color-secundario)'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">Inteligencia Artificial y Tech</a></li>
+                    <li style="margin-bottom: 12px;"><a href="propiedad-intelectual.html" style="color: rgba(255, 255, 255, 0.65); text-decoration: none; font-weight: 300; transition: color 0.3s;" onmouseover="this.style.color='var(--color-secundario)'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">Propiedad Intelectual Digital</a></li>
+                    <li style="margin-bottom: 12px;"><a href="salud-amparos.html" style="color: var(--color-secundario); text-decoration: none; font-weight: 400;">Derecho de la Salud y Amparos</a></li>
+                    <li style="margin-bottom: 12px;"><a href="real-estate.html" style="color: rgba(255, 255, 255, 0.65); text-decoration: none; font-weight: 300; transition: color 0.3s;" onmouseover="this.style.color='var(--color-secundario)'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">Real Estate y Desarrollos</a></li>
                 </ul>
             </div>
-            <div>
-                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px;">ENFOQUE MERCOSUR</h4>
-                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">Mantenemos una red activa de corresponsalías y alianzas estratégicas operativas en los principales centros comerciales y productivos del país y los mercados de la región.</p>
+
+            <!-- Columna 3 -->
+            <div class="columna-footer-fija">
+                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px; font-weight: 500; letter-spacing: 0.5px;">ENFOQUE MERCOSUR</h4>
+                <p style="color: rgba(255, 255, 255, 0.65); font-size: 0.85rem; line-height: 1.8; font-weight: 300; margin: 0;">Mantenemos una red activa de corresponsalías y alianzas estratégicas operativas en los principales centros comerciales y productivos del país y los mercados de la región.</p>
             </div>
         </div>
-        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; text-align: center; font-size: 0.8rem; color: rgba(255, 255, 255, 0.4); font-weight: 300;">
-            <p>© <script>document.write(new Date().getFullYear());</script> Riganti, Geiler & Márquez Alluralde - Abogados. Todos los derechos reservados.</p>
+
+        <!-- Línea Inferior de Copyright -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 25px; text-align: center; font-size: 0.8rem; color: rgba(255, 255, 255, 0.4); font-weight: 300;">
+            <p style="margin: 0;">© <script>document.write(new Date().getFullYear());</script> Riganti, Geiler & Márquez Alluralde - Abogados. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- INTERACTIVIDAD COMPARTIDA -->
+    <!-- INTERACTIVIDAD DE MENÚ SUPERIOR -->
     <script>
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.padding = '15px 8%';
-                header.style.backgroundColor = 'rgba(10, 17, 32, 0.99)';
-            } else {
-                header.style.padding = '25px 8%';
-                header.style.backgroundColor = 'rgba(10, 17, 32, 0.96)';
+            if (header) {
+                if (window.scrollY > 50) {
+                    header.style.padding = '15px 4%';
+                    header.style.backgroundColor = 'rgba(10, 17, 32, 0.99)';
+                } else {
+                    header.style.padding = '20px 4%';
+                    header.style.backgroundColor = 'rgba(10, 17, 32, 0.96)';
+                }
             }
         });
     </script>
