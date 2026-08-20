@@ -89,17 +89,21 @@
 </head>
 <body>
 
-    <header style="position: fixed; top: 0; left: 0; width: 100%; padding: 25px 8%; background-color: rgba(10, 17, 32, 0.96); display: flex; justify-content: space-between; align-items: center; z-index: 1000; transition: all 0.3s; border-bottom: 1px solid rgba(255,255,255,0.03);">
-        <div style="font-family: var(--fuente-titulos); color: #ffffff; font-size: 1.15rem; font-weight: 500; letter-spacing: 1px;">
+  <header style="position: fixed; top: 0; left: 0; width: 100%; padding: 20px 6%; background-color: rgba(10, 17, 32, 0.96); display: flex; justify-content: space-between; align-items: center; z-index: 1000; transition: all 0.3s; border-bottom: 1px solid rgba(255,255,255,0.03); gap: 20px;">
+        
+        <!-- Nombre de la firma con flex-shrink: 0 para evitar que se aplaste o empuje al menú -->
+        <div style="font-family: var(--fuente-titulos); color: #ffffff; font-size: 1.05rem; font-weight: 500; letter-spacing: 1px; flex-shrink: 0; white-space: nowrap;">
             RIGANTI, GEILER & MÁRQUEZ ALLURALDE
             <span style="display: block; font-size: 0.65rem; color: var(--color-secundario); letter-spacing: 3px; margin-top: 4px;">ABOGADOS</span>
         </div>
-        <nav>
-            <ul style="display: flex; list-style: none; gap: 35px; margin: 0;">
-                <li><a href="index.html#inicio" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">INICIO</a></li>
-                <li><a href="index.html#estudio" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">EL ESTUDIO</a></li>
-                <li><a href="index.html#practicas" style="color: var(--color-secundario); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">ÁREAS</a></li>
-                <li><a href="index.html#contacto" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">CONTACTO</a></li>
+        
+        <!-- Contenedor de navegación con margen interno controlado -->
+        <nav style="display: block;">
+            <ul style="display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; white-space: nowrap;">
+                <li><a href="index.html#inicio" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; font-weight: 300;">INICIO</a></li>
+                <li><a href="index.html#estudio" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; font-weight: 300;">EL ESTUDIO</a></li>
+                <li><a href="index.html#practicas" style="color: var(--color-secundario); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; font-weight: 400;">ÁREAS</a></li>
+                <li><a href="index.html#contacto" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; font-weight: 300;">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
