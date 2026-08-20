@@ -160,13 +160,44 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 3: LLAMADO A LA ACCIÓN -->
-        <section class="cta-interno">
-            <h2 style="font-family: var(--fuente-titulos); margin-bottom: 15px;">¿Está planificando un desarrollo inmobiliario o un modelo de inversión digital?</h2>
-            <p>Agende una sesión de consultoría confidencial con nuestro equipo especializado en estructuración fiduciaria y negocios de Real Estate.</p>
-            <a href="index.html#contacto" class="btn-cta-interno">Iniciar Consulta</a>
+                <!-- SECCIÓN 3: LLAMADO A LA ACCIÓN CON IMAGEN DE FONDO PREMIUM -->
+        <section class="cta-interno" style="
+            position: relative; 
+            padding: 120px 12%; 
+            background-image: linear-gradient(rgba(7, 14, 27, 0.82), rgba(7, 14, 27, 0.88)), url('https://unsplash.com'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            color: #ffffff; 
+            text-align: center;
+            overflow: hidden;
+        ">
+            <div style="position: relative; z-index: 2; max-width: 750px; margin: 0 auto;">
+                <h2 style="font-family: var(--fuente-titulos); font-size: 2rem; color: var(--color-secundario, #c5a880); margin-bottom: 20px; font-weight: 500; letter-spacing: 0.5px;">
+                    ¿Está planificando un desarrollo inmobiliario o un modelo de inversión digital?
+                </h2>
+                <div style="width: 50px; height: 2px; background-color: var(--color-secundario, #c5a880); margin: 0 auto 25px auto;"></div>
+                <p style="font-family: var(--fuente-cuerpo); font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 35px; font-weight: 300;">
+                    Agende una sesión de consultoría confidencial con nuestro equipo especializado en estructuración fiduciaria, transacciones de múltiples jurisdicciones y negocios de Real Estate.
+                </p>
+                <a href="index.html#contacto" class="btn-cta-interno" style="
+                    display: inline-block; 
+                    padding: 14px 40px; 
+                    background-color: var(--color-secundario, #c5a880); 
+                    color: var(--color-primario, #070e1b); 
+                    text-decoration: none; 
+                    font-weight: 500; 
+                    font-size: 0.85rem; 
+                    text-transform: uppercase; 
+                    letter-spacing: 1.5px; 
+                    border-radius: 2px; 
+                    transition: all 0.3s ease;
+                    border: 1px solid var(--color-secundario, #c5a880);
+                " onmouseover="this.style.backgroundColor='transparent'; this.style.color='var(--color-secundario)';" onmouseout="this.style.backgroundColor='var(--color-secundario)'; this.style.color='var(--color-primario)';">
+                    Iniciar Consulta
+                </a>
+            </div>
         </section>
-    </main>
 
     <!-- PIE DE PÁGINA (FOOTER CON ENFOQUE MERCOSUR) -->
     <footer style="background-color: var(--color-primario); color: #ffffff; padding: 60px 12% 40px 12%; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--fuente-cuerpo);">
