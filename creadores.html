@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creadores de Contenido e Influencers | Riganti, Geiler & Márquez Alluralde</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        .hero-interno {
+            padding: 160px 12% 80px 12%;
+            background-color: #070e1b;
+            color: #ffffff;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .hero-interno h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 2.6rem;
+            color: var(--color-secundario);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .hero-interno p {
+            font-family: var(--fuente-cuerpo);
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 850px;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        .linea-separadora {
+            width: 50px;
+            height: 2px;
+            background-color: var(--color-secundario);
+            margin-bottom: 25px;
+        }
+        .contenedor-subareas {
+            padding: 80px 12%;
+            background-color: var(--color-fondo-claro, #f8f9fa);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+        }
+        .tarjeta-subarea {
+            background-color: #ffffff;
+            padding: 40px 35px;
+            border-radius: 2px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.02);
+            border-top: 3px solid var(--color-primario);
+            transition: transform 0.3s ease;
+        }
+        .tarjeta-subarea:hover {
+            transform: translateY(-5px);
+        }
+        .tarjeta-subarea h3 {
+            font-family: var(--fuente-titulos);
+            color: var(--color-primario);
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        .tarjeta-subarea ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .tarjeta-subarea ul li {
+            font-family: var(--fuente-cuerpo);
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-bottom: 16px;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 22px;
+            font-weight: 300;
+        }
+        .tarjeta-subarea ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-secundario);
+            font-weight: bold;
+        }
+        .cta-interno {
+            padding: 70px 12%;
+            background-color: var(--color-primario);
+            color: #ffffff;
+            text-align: center;
+        }
+        .btn-cta-interno {
+            display: inline-block;
+            padding: 14px 40px;
+            background-color: var(--color-secundario);
+            color: var(--color-primario);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.3s;
+        }
+        @media (max-width: 992px) {
+            .hero-interno { padding: 140px 8% 60px 8%; }
+            .contenedor-subareas { padding: 60px 8%; grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header style="position: fixed; top: 0; left: 0; width: 100%; padding: 25px 8%; background-color: rgba(10, 17, 32, 0.96); display: flex; justify-content: space-between; align-items: center; z-index: 1000; transition: all 0.3s; border-bottom: 1px solid rgba(255,255,255,0.03);">
+        <div style="font-family: var(--fuente-titulos); color: #ffffff; font-size: 1.15rem; font-weight: 500; letter-spacing: 1px;">
+            RIGANTI, GEILER & MÁRQUEZ ALLURALDE
+            <span style="display: block; font-size: 0.65rem; color: var(--color-secundario); letter-spacing: 3px; margin-top: 4px;">ABOGADOS</span>
+        </div>
+        <nav>
+            <ul style="display: flex; list-style: none; gap: 35px; margin: 0;">
+                <li><a href="index.html#inicio" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">INICIO</a></li>
+                <li><a href="index.html#estudio" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">EL ESTUDIO</a></li>
+                <li><a href="index.html#practicas" style="color: var(--color-secundario); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">ÁREAS</a></li>
+                <li><a href="index.html#contacto" style="color: #ffffff; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-interno">
+            <div class="linea-separadora"></div>
+            <h1>Creadores de Contenido e Influencers</h1>
+            <p>Asesoramos a creadores, streamers, agencias y productoras en la estructuración de su negocio digital y la negociación de sus contratos. El mercado de la economía creativa se mueve a ritmos dinámicos; nos encargamos de blindar tu marca, tus producciones y tus ingresos en el plano federal y regional.</p>
+        </section>
+                <!-- SECCIÓN 2: DESGLOSE DE SERVICIOS TÉCNICOS -->
+        <section class="contenedor-subareas">
+            <!-- Tarjeta 1 -->
+            <div class="tarjeta-subarea">
+                <h3>Contratos de Patrocinio y Marcas</h3>
+                <ul>
+                    <li><strong>Revisión de acuerdos comerciales:</strong> Analizamos la letra chica de los contratos que te envían las agencias o marcas antes de firmar para evitar compromisos ocultos.</li>
+                    <li><strong>Derechos de uso de imagen:</strong> Delimitamos por cuánto tiempo, en qué países y en qué medios exactos una marca puede explotar tus videos, fotos o transmisiones.</li>
+                    <li><strong>Cláusulas de exclusividad:</strong> Negociamos restricciones comerciales específicas y cortas para que no congelen tus oportunidades de ingresos con otros clientes del sector.</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="tarjeta-subarea">
+                <h3>Representación y Cobros</h3>
+                <ul>
+                    <li><strong>Contratos con agencias (MCN):</strong> Evaluamos esquemas de comisiones, plazos de permanencia y condiciones de rescisión en acuerdos de representación artística digital.</li>
+                    <li><strong>Facturación y cobros del exterior:</strong> Diseñamos el encuadre legal idóneo para que percibas tus ingresos de Twitch, YouTube, OnlyFans o pautas extranjeras sin contingencias impositivas.</li>
+                    <li><strong>Reclamos por falta de pauta:</strong> Gestionamos intimaciones legales eficaces para acelerar el cobro de pautas comerciales retrasadas sin justificación.</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="tarjeta-subarea">
+                <h3>Defensa de Canales y Marca Personal</h3>
+                <ul>
+                    <li><strong>Registro de marca comercial:</strong> Inscribimos tu nombre civil, seudónimo o logotipo ante el INPI para otorgarte la exclusividad legal de tu marca en el mercado.</li>
+                    <li><strong>Conflictos con plataformas:</strong> Te asistimos en la gestión legal frente a cierres injustificados de cuentas, suplantación de identidad o reclamos infundados de copyright (strikes).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: LLAMADO A LA ACCIÓN -->
+        <section class="cta-interno">
+            <h2 style="font-family: var(--fuente-titulos); margin-bottom: 15px;">¿Querés proteger tus contratos o ingresos digitales?</h2>
+            <p>Agende una sesión de consultoría confidencial con nuestro equipo especializado en la economía de creadores y derecho digital.</p>
+            <a href="index.html#contacto" class="btn-cta-interno">Iniciar Consulta</a>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER ACTUALIZADO CON ENFOQUE MERCOSUR) -->
+    <footer style="background-color: var(--color-primario); color: #ffffff; padding: 60px 12% 40px 12%; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--fuente-cuerpo);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-bottom: 40px; text-align: left;">
+            <div>
+                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px;">LA FIRMA</h4>
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">Riganti, Geiler & Márquez Alluralde Abogados proporciona consultoría y defensa legal corporativa institucional de alta complejidad con un enfoque federal y regional.</p>
+            </div>
+            <div>
+                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px;">ÁREAS CLAVE</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem;">
+                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Startups y Negocios Digitales</a></li>
+                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Creadores de Contenido e Influencers</a></li>
+                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Derecho Deportivo</a></li>
+                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Inteligencia Artificial y Tech</a></li>
+                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Propiedad Intelectual Digital</a></li>
+                    <li style="margin-bottom: 10px;"><a href="index.html#practicas" style="color: rgba(255, 255, 255, 0.6); text-decoration: none;">Derecho de la Salud y Amparos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-family: var(--fuente-titulos); color: var(--color-secundario); font-size: 0.95rem; margin-bottom: 20px;">ENFOQUE MERCOSUR</h4>
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">Mantenemos una red activa de corresponsalías y alianzas estratégicas operativas en los principales centros comerciales y productivos del país y los mercados de la región.</p>
+            </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; text-align: center; font-size: 0.8rem; color: rgba(255, 255, 255, 0.4);">
+            <p>© <script>document.write(new Date().getFullYear());</script> Riganti, Geiler & Márquez Alluralde - Abogados. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVIDAD COMPARTIDA -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '15px 8%';
+                header.style.backgroundColor = 'rgba(10, 17, 32, 0.99)';
+            } else {
+                header.style.padding = '25px 8%';
+                header.style.backgroundColor = 'rgba(10, 17, 32, 0.96)';
+            }
+        });
+    </script>
+</body>
+</html>
